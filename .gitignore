@@ -1,0 +1,37 @@
+# Go binary executables
+/bin/
+/out/
+/*.exe
+/*.out
+/*.test
+
+# Go modules and vendor
+/vendor/
+/go.sum
+/go.mod
+
+# Go build cache
+/.cache/
+/*.log
+
+# IDE or editor-specific files
+.vscode/
+/.idea/
+/*.swp
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.bak
+*.tmp
+
+# Environment files
+.env
+
+# Debug and profiling files
+*.pprof
+*.heap
