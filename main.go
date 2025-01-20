@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"os"
 
 	"github.com/microsite-ilustrasi/database"
 	"github.com/microsite-ilustrasi/routes"
@@ -14,9 +12,6 @@ import (
 )
 
 func main() {
-
-	fmt.Println("DB_HOST:", os.Getenv("DB_HOST"))
-	fmt.Println("DB_USER:", os.Getenv("DB_USER"))
 
 	// Initialize database
 	database.InitDatabase()
@@ -31,6 +26,7 @@ func main() {
 	// Setup routes
 	routes.SetupAuthRoutes(app)
 	routes.SetupProtectedRoutes(app)
+	routes.SetupRoutes(app)
 
 	// Start server
 	log.Fatal(app.Listen(":3000"))
